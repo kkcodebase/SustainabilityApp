@@ -18,7 +18,7 @@ Planetpulse is an Android application built using Java and XML. The app uses Fir
 
 <table>
   <tr>
-<td><img src= https://user-images.githubusercontent.com/84273332/232278373-a881b2a9-8359-4c4b-b3ad-ac6010f0080b.jpeg width=340 height=620></td>
+
 <td><img src=https://user-images.githubusercontent.com/84273332/232278368-255ec253-a7c1-4378-a413-40decf1d8c7d.jpeg width=340 height=620></td>
 </table>
 
