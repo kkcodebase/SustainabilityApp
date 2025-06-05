@@ -1,0 +1,54 @@
+{
+  "tips":[
+    {
+      "number":"tip0",
+      "title": "Transition to a plant-based diet",
+      "tip":"Adopting a plant-based diet has the biggest impact on reducing carbon emissions from food production."
+    },
+    {
+      "number":"tip1",
+      "title": "Reduce car usage",
+      "tip":"Use public transportation, carpool, or switch to an electric vehicle to reduce carbon emissions from transportation."
+    },
+    {
+      "number":"tip2",
+      "title": "Use renewable energy",
+      "tip":"Install solar panels or subscribe to a renewable energy program to power your home with clean energy."
+    },
+    {
+      "number":"tip3",
+      "title": "Use renewable energy",
+      "tip":"Air travel is a significant source of carbon emissions, so consider taking fewer flights or finding alternative modes of transportation."
+    },
+    {
+      "number":"tip4",
+      "title": "Use energy-efficient appliances",
+      "tip":"Replace old appliances with energy-efficient models to reduce energy consumption and carbon emissions."
+    },
+    {
+      "number":"tip5",
+      "title": "Reduce water consumption",
+      "tip":"Fix leaks, take shorter showers, and use water-efficient fixtures to conserve water and reduce carbon emissions."
+    },
+    {
+      "number":"tip6",
+      "title": "Reduce plastic use",
+      "tip":"Use reusable bags, water bottles, and containers to reduce plastic waste and carbon emissions."
+    },
+    {
+      "number":"tip7",
+      "title": "Buy local and seasonal food",
+      "tip":"Buying locally and seasonally reduces carbon emissions from transportation and storage of food."
+    },
+    {
+      "number":"tip8",
+      "title": "Support sustainable companies",
+      "tip":"Choose companies that prioritize sustainability and use eco-friendly practices in their production and operations."
+    },
+    {
+      "number":"tip9",
+      "title": "Plant trees",
+      "tip":"Planting trees absorbs carbon dioxide from the atmosphere and can help mitigate the impact of your carbon footprint."
+    }
+  ]
+}

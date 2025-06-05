@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "403891300830",
+    "project_id": "planetpulse-37fe2",
+    "storage_bucket": "planetpulse-37fe2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:403891300830:android:2bca01759f2b2f39c3954f",
+        "android_client_info": {
+          "package_name": "dev.redfox.planetpulse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "403891300830-lp6qem6lp8iq7vc1j85e8gqfe115n9hq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxYqRaLNMMYjWVFYreJVlaLPeKa_GUQ_o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "403891300830-lp6qem6lp8iq7vc1j85e8gqfe115n9hq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

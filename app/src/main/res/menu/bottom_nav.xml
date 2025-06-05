@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/dashboard"
+        android:icon="@drawable/ic_dashboard"
+        android:title="Dash"/>
+
+
+    <item
+        android:id="@+id/community"
+        android:icon="@drawable/ic_community"
+        android:title="Quiz"/>
+
+    <item
+        android:id="@+id/rewards"
+        android:icon="@drawable/ic_rewards"
+        android:title="Rewards"/>
+
+
+    <item
+        android:id="@+id/shop"
+        android:icon="@drawable/ic_shop"
+        android:title="Shop"/>
+
+    <item
+        android:id="@+id/tips"
+        android:icon="@drawable/ic_lightbulb"
+        android:title="Tips"/>
+
+</menu>

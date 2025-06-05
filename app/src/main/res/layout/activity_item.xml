@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/ivActivityIcon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_run"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvActivityName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Walk or Cycle to Work"
+            android:textSize="16sp"
+            android:textColor="@color/material_green_dark"
+            android:fontFamily="@font/sofiaprosoftbold"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toEndOf="@id/ivActivityIcon"
+            app:layout_constraintEnd_toStartOf="@id/tvPointsReward"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvActivityDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Reduce carbon emissions by choosing eco-friendly transportation"
+            android:textSize="14sp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toEndOf="@id/ivActivityIcon"
+            app:layout_constraintEnd_toStartOf="@id/tvPointsReward"
+            app:layout_constraintTop_toBottomOf="@id/tvActivityName"/>
+
+        <TextView
+            android:id="@+id/tvPointsReward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+50"
+            android:textSize="20sp"
+            android:textColor="@color/material_green_dark"
+            android:fontFamily="@font/sofiaprosoftbold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <Button
+            android:id="@+id/btnLogActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOG"
+            android:textSize="12sp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/material_green_dark"
+            app:layout_constraintTop_toBottomOf="@id/tvActivityDescription"
+            app:layout_constraintStart_toEndOf="@id/ivActivityIcon"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

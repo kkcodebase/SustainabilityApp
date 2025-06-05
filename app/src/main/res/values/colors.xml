@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="notion_white">#FFFFFFF4</color>
+    <color name="material_red">#FF7189</color>
+    <color name="material_red_dark">#FF4766</color>
+    <color name="material_blue">#4599FF</color>
+    <color name="material_yellow">#D9FFA9</color>
+    <color name="material_yellow_alt">#FDFFD4</color>
+    <color name="material_purple">#B15AFF</color>
+    <color name="material_green">#43C685</color>
+    <color name="material_green_dark">#25A365</color>
+    <color name="material_orange">#FF6D63</color>
+    <color name="subtle_red">#D2FFC8D2</color>
+    <color name="dark">#4D4D4D</color>
+    <color name="grey">#727272</color>
+    <color name="material_grey">#EFEFEF</color>
+    <color name="trans">#00FFFFFF</color>
+    <color name="card_color1">#FFF1D4</color>
+    <color name="card_color2">#FFDAB8</color>
+    <color name="card_color3">#FFD3D3</color>
+    <color name="card_color4">#FFE28D</color>
+    <color name="yellow">#FFD969</color>
+
+    <color name="black_alpha10">#1A000000</color>
+
+    <color name="black_alpha60">#99000000</color>
+    <color name="black_alpha40">#66000000</color>
+
+    <color name="white_alpha30">#4DFFFFFF</color>
+
+    <color name="bg_light_blue">#D3EDFF</color>
+    <color name="bg_light_blue_alpha10">#1A63BEFF</color>
+
+    <!--SnackBar Colors-->
+    <color name="colorSuccess">#4caf50</color>
+    <color name="colorError">#d32f2f</color>
+    <color name="colorWarning">#ff9800</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="intro_small_card_one">#26F1DE54</color>
+    <color name="intro_small_card_two">#268C95FB</color>
+
+    <color name="color_top_card">#E7E7E7</color>
+    <color name="color_bottom_card">#7DE4BF</color>
+    <color name="color_appBar">#171c1c</color>
+</resources>

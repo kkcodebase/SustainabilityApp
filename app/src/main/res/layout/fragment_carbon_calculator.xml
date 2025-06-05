@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E5FFE6"
+    android:paddingBottom="100dp"
+    tools:context=".ui.CarbonCalculatorFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:padding="26dp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sofiaprosoftbold"
+            android:text="Carbon Footprint Calculator"
+            android:textAlignment="center"
+            android:textColor="@color/material_green_dark"
+            android:textSize="24sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/sofiaprosoftmedium"
+            android:text="Calculate your annual carbon footprint by filling in the information below."
+            android:textAlignment="center"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+        <!-- Transportation Section -->
+        <TextView
+            android:id="@+id/tvTransportationTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/sofiaprosoftbold"
+            android:text="Transportation"
+            android:textColor="@color/material_green_dark"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/tvDescription" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilCarKm"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Car kilometers per week"
+            app:layout_constraintTop_toBottomOf="@id/tvTransportationTitle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etCarKm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPublicTransportKm"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Public transport kilometers per week"
+            app:layout_constraintTop_toBottomOf="@id/tilCarKm">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPublicTransportKm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilFlights"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Number of flights per year"
+            app:layout_constraintTop_toBottomOf="@id/tilPublicTransportKm">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etFlights"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Home Energy Section -->
+        <TextView
+            android:id="@+id/tvHomeEnergyTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/sofiaprosoftbold"
+            android:text="Home Energy"
+            android:textColor="@color/material_green_dark"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/tilFlights" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilElectricity"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Electricity usage (kWh per month)"
+            app:layout_constraintTop_toBottomOf="@id/tvHomeEnergyTitle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etElectricity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilGas"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Gas usage (units per month)"
+            app:layout_constraintTop_toBottomOf="@id/tilElectricity">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etGas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Diet Section -->
+        <TextView
+            android:id="@+id/tvDietTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/sofiaprosoftbold"
+            android:text="Diet"
+            android:textColor="@color/material_green_dark"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/tilGas" />
+
+        <RadioGroup
+            android:id="@+id/rgDiet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/tvDietTitle">
+
+            <RadioButton
+                android:id="@+id/rbHighMeat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="High meat consumption (daily)" />
+
+            <RadioButton
+                android:id="@+id/rbMediumMeat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Medium meat consumption (few times a week)" />
+
+            <RadioButton
+                android:id="@+id/rbLowMeat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Low meat consumption (once a week)" />
+
+            <RadioButton
+                android:id="@+id/rbVegetarian"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Vegetarian" />
+
+            <RadioButton
+                android:id="@+id/rbVegan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Vegan" />
+        </RadioGroup>
+
+        <!-- Calculate Button -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvCalculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/material_green_dark"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rgDiet">
+
+            <TextView
+                android:id="@+id/btnCalculate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:fontFamily="@font/sofiaprosoftmedium"
+                android:text="Calculate My Footprint"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Results Section -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/resultLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/rounded_background"
+            android:padding="16dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/cvCalculate"
+            tools:visibility="visible">
+
+            <TextView
+                android:id="@+id/tvResultTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sofiaprosoftbold"
+                android:text="Your Carbon Footprint"
+                android:textAlignment="center"
+                android:textColor="@color/material_green_dark"
+                android:textSize="20sp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/sofiaprosoftbold"
+                android:textAlignment="center"
+                android:textColor="@color/material_green_dark"
+                android:textSize="36sp"
+                app:layout_constraintTop_toBottomOf="@id/tvResultTitle"
+                tools:text="5.2" />
+
+            <TextView
+                android:id="@+id/tvResultUnit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sofiaprosoftmedium"
+                android:text="tonnes CO₂ per year"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/tvResult" />
+
+            <TextView
+                android:id="@+id/tvTips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/sofiaprosoftmedium"
+                android:text="Check out our tips section to reduce your carbon footprint!"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/tvResultUnit" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

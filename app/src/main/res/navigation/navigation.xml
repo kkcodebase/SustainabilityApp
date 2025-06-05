@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="dev.redfox.planetpulse.ui.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+    <fragment
+        android:id="@+id/step1Fragment2"
+        android:name="dev.redfox.planetpulse.ui.question.Step1Fragment"
+        android:label="fragment_step1"
+        tools:layout="@layout/fragment_step1" >
+        <action
+            android:id="@+id/action_step1Fragment2_to_step2Fragment2"
+            app:destination="@id/step2Fragment2"
+            app:popUpTo="@id/step2Fragment2"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/step2Fragment2"
+        android:name="dev.redfox.planetpulse.ui.question.Step2Fragment"
+        android:label="fragment_step2"
+        tools:layout="@layout/fragment_step2" >
+        <action
+            android:id="@+id/action_step2Fragment2_to_step3Fragment2"
+            app:destination="@id/step3Fragment2"
+            app:popUpTo="@id/step2Fragment2"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/step4Fragment2"
+        android:name="dev.redfox.planetpulse.ui.question.Step4Fragment"
+        android:label="fragment_step4"
+        tools:layout="@layout/fragment_step4" >
+        <action
+            android:id="@+id/action_step4Fragment2_to_step5Fragment2"
+            app:destination="@id/step5Fragment2"
+            app:popUpTo="@id/step4Fragment2"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/step3Fragment2"
+        android:name="dev.redfox.planetpulse.ui.question.Step3Fragment"
+        android:label="fragment_step3"
+        tools:layout="@layout/fragment_step3" >
+        <action
+            android:id="@+id/action_step3Fragment2_to_step4Fragment2"
+            app:destination="@id/step4Fragment2"
+            app:popUpTo="@id/step3Fragment2"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/step5Fragment2"
+        android:name="dev.redfox.planetpulse.ui.question.Step5Fragment"
+        android:label="fragment_step5"
+        tools:layout="@layout/fragment_step5" >
+        <action
+            android:id="@+id/action_step5Fragment2_to_dashboardFragment"
+            app:destination="@id/dashboardFragment"
+            app:popUpTo="@id/step5Fragment2"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

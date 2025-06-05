@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="false"
+    tools:context=".ui.DashboardFragment">
+
+    <VideoView
+        android:id="@+id/dashboardVideo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/welcomeMessageCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="70dp"
+        app:cardBackgroundColor="#80043A2E"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="8dp"
+        android:foreground="?attr/selectableItemBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/gradientOverlay"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@drawable/welcome_card_gradient"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivLeafIcon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/baseline_energy_savings_leaf_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/tvWelcome"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sofiaprosoftbold"
+                android:gravity="center"
+                android:padding="20dp"
+                android:text="Welcome to the EcoStride App"
+                android:textColor="@color/white"
+                android:textSize="26sp"
+                android:shadowColor="#80000000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvWelcomeSubtitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sofiaprosoftmedium"
+                android:gravity="center"
+                android:paddingHorizontal="20dp"
+                android:paddingBottom="16dp"
+                android:text="Track your carbon footprint and make a difference !"
+                android:textColor="#E6FFFFFF"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvWelcome" />
+
+            <ImageView
+                android:id="@+id/ivEarthIcon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/baseline_home_work_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/white" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="120dp"
+        >
+
+
+
+
+    <TextView
+        android:id="@+id/tvCarbonFootHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:fontFamily="@font/sofiaprosoftmedium"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCarbonFootprint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5.87"
+        android:textSize="55sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/sofiaprosoftbold"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCarbonFootHeader"/>
+
+    <TextView
+        android:id="@+id/tvTonsCO2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tons CO2e"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/sofiaprosoftmedium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCarbonFootprint"
+        />
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/myProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        app:indicatorColor="@color/colorWarning"
+        app:trackColor="@color/colorWarning"
+        app:trackCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTonsCO2" />
+
+    <TextView
+        android:id="@+id/tvYou"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your carbon footprint per year:"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:fontFamily="@font/sofiaprosoftmedium"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/myProgressBar"
+        app:layout_constraintTop_toBottomOf="@id/myProgressBar"/>
+
+    <TextView
+        android:id="@+id/tvYouCO2Value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5.87 tons"
+        android:textColor="@color/white"
+        android:fontFamily="@font/sofiaprosoftmedium"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@id/myProgressBar"
+        app:layout_constraintTop_toBottomOf="@id/myProgressBar"/>
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/indiaProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        app:indicatorColor="@color/colorSuccess"
+        app:trackColor="@color/colorSuccess"
+        android:progress="50"
+        app:trackCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvYou" />
+
+    <TextView
+        android:id="@+id/tvAvgIndia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Avg in India"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:fontFamily="@font/sofiaprosoftmedium"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/myProgressBar"
+        app:layout_constraintTop_toBottomOf="@id/indiaProgressBar"/>
+
+    <TextView
+        android:id="@+id/tvAvgIndiaCO2Value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2.3 tons/year per person"
+        android:textColor="@color/white"
+        android:fontFamily="@font/sofiaprosoftmedium"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@id/myProgressBar"
+        app:layout_constraintTop_toBottomOf="@id/indiaProgressBar"/>
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/worldProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        app:indicatorColor="@color/colorSuccess"
+        app:trackColor="@color/colorSuccess"
+        android:progress="50"
+        app:trackCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAvgIndia" />
+
+    <TextView
+        android:id="@+id/tvAvgWorld"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Avg in the World"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:fontFamily="@font/sofiaprosoftmedium"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/myProgressBar"
+        app:layout_constraintTop_toBottomOf="@id/worldProgressBar"/>
+
+    <TextView
+        android:id="@+id/tvAvgWorldCO2Value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4.6 tons/year per person"
+        android:textColor="@color/white"
+        android:fontFamily="@font/sofiaprosoftmedium"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+
+        app:layout_constraintEnd_toEndOf="@id/myProgressBar"
+        app:layout_constraintTop_toBottomOf="@id/worldProgressBar"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/sofiaprosoftbold"
+        android:text="Understand your footprint"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/myProgressBar"
+        app:layout_constraintTop_toBottomOf="@id/tvAvgWorldCO2Value" />
+
+        <LinearLayout
+            android:id="@+id/barGraph"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="10dp"
+                android:layout_height="150dp"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="3dp"
+                app:cardBackgroundColor="@color/material_blue"
+                app:cardCornerRadius="28dp"
+                app:cardElevation="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/bar2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/bar2"
+                android:layout_width="10dp"
+                android:layout_height="100dp"
+                android:layout_gravity="bottom"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="3dp"
+                app:cardBackgroundColor="@color/material_blue"
+                app:cardCornerRadius="28dp"
+                app:cardElevation="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/bar3"
+                app:layout_constraintStart_toEndOf="@+id/bar1"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/bar3"
+                android:layout_width="10dp"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="3dp"
+                app:cardBackgroundColor="@color/material_blue"
+                app:cardCornerRadius="28dp"
+                app:cardElevation="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/bar2"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/bar4"
+                android:layout_width="10dp"
+                android:layout_height="30dp"
+                android:layout_gravity="bottom"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="3dp"
+                app:cardBackgroundColor="@color/material_blue"
+                app:cardCornerRadius="28dp"
+                app:cardElevation="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/bar2"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/bar5"
+                android:layout_width="10dp"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="3dp"
+                app:cardBackgroundColor="@color/material_blue"
+                app:cardCornerRadius="28dp"
+                app:cardElevation="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/bar2"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/barGraph">
+
+        <TextView
+            android:id="@+id/tvFlying"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Flying"
+            android:textColor="@color/white"
+            android:layout_marginHorizontal="40dp"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvFlyingVal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3.88 t"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/tvFlying"
+            app:layout_constraintStart_toStartOf="@+id/tvFlying"
+            app:layout_constraintTop_toBottomOf="@id/tvFlying" />
+
+        <TextView
+            android:id="@+id/tvMobility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="Mobility"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@id/tvFlying"
+            />
+
+        <TextView
+            android:id="@+id/tvMobilityVal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2.68 t"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/tvMobility"
+            app:layout_constraintStart_toStartOf="@+id/tvMobility"
+            app:layout_constraintTop_toBottomOf="@id/tvMobility" />
+
+        <TextView
+            android:id="@+id/tvHousing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:text="Housing"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@id/tvMobility"
+            />
+
+        <TextView
+            android:id="@+id/tvHousingVal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.88 t"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/tvHousing"
+            app:layout_constraintStart_toStartOf="@+id/tvHousing"
+            app:layout_constraintTop_toBottomOf="@id/tvHousing" />
+
+        <TextView
+            android:id="@+id/tvDiet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:textColor="@color/white"
+            android:text="Diet"
+            app:layout_constraintStart_toEndOf="@id/tvHousing"
+            />
+
+        <TextView
+            android:id="@+id/tvDietVal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.78 t"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/tvDiet"
+            app:layout_constraintStart_toStartOf="@+id/tvDiet"
+            app:layout_constraintTop_toBottomOf="@id/tvHousing" />
+
+
+        <TextView
+            android:id="@+id/tvSpending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:text="Spending"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@id/tvDiet"
+            />
+
+        <TextView
+            android:id="@+id/tvSpendingVal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.24 t"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/tvSpending"
+            app:layout_constraintStart_toStartOf="@+id/tvSpending"
+            app:layout_constraintTop_toBottomOf="@id/tvHousing" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
